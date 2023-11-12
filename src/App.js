@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="container mx-auto">
+      <div className="container mx-auto h-[200vh]">
         <p>test</p>
       </div>
     </>

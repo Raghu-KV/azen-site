@@ -7,7 +7,7 @@ import { useState } from "react";
 function NavBar() {
   const [open, setOpen] = useState(false);
   return (
-    <div className=" bg-white border fixed w-full z-10">
+    <div className=" bg-white fixed w-full z-10">
       <div className="container mx-auto">
         <div className="flex min-h-[50px] items-center w-full px-5 font-poppins font-semibold justify-between">
           <div className="md:hidden z-20" onClick={() => setOpen(!open)}>

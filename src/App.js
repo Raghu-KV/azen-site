@@ -6,6 +6,7 @@ function App() {
     <>
       <NavBar />
       <HeroSection />
+      <div>test</div>
     </>
   );
 }

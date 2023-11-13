@@ -2,30 +2,75 @@ import { BiSolidPhone } from "react-icons/bi";
 
 import { ReactComponent as Circle } from "../asset/svg/circle.svg";
 import { ReactComponent as TubeLg } from "../asset/svg/tube-lg.svg";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 function HeroSection() {
+  const circle = useRef();
+  const tube1 = useRef();
+  const tube2 = useRef();
+  const tube3 = useRef();
+
+  useEffect(() => {
+    const parallax = (event) => {
+      console.log(circle.current);
+      const x = event.clientX;
+      const y = event.clientY;
+      circle.current.style.transform = `translateX(${x / 50}px) translateY(${
+        y / 50
+      }px)`;
+      tube1.current.style.transform = `translateX(${x / 40}px) translateY(${
+        y / 40
+      }px)`;
+      tube2.current.style.transform = `translateX(${-x / 60}px) translateY(${
+        -y / 60
+      }px) rotate(280deg)`;
+      tube3.current.style.transform = `translateX(${x / 100}px) translateY(${
+        y / 100
+      }px) rotate(180deg)`;
+    };
+
+    document.addEventListener("mousemove", parallax);
+  }, []);
+
+  const style = {
+    backgroundImage:
+      "radial-gradient(1000px 300px ellipse at 0% 0%, rgba(254, 117, 155, 0.6), white)",
+  };
   return (
-    <div className="pt-20">
-      <div className="min-h-screen grid grid-cols-3 gap-2  font-poppins container mx-auto">
-        <div className=" flex flex-col justify-center col-span-2 ">
-          <h1 className="text-[40px] md:text-[70px] font-extrabold">
+    <div className="p-10 " style={style}>
+      <div className="min-h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto">
+        <div className=" flex flex-col justify-center col-span-2">
+          <h1 className="text-[45px] leading-[3rem] text-center md:leading-[5rem] md:text-[70px] md:text-left font-extrabold">
             INNOVATIVE SOLUTION,
           </h1>
-          <h2 className="text-[30px] font-extrabold ">
+          <h2 className="md:text-[30px] md:font-extrabold md:text-left mt-5 text-center">
             crafting your digital success story
           </h2>
-          <div className="flex py-3  gap-2 mt-4 font-semibold items-center text-pirmary cursor-pointer">
-            <div className=" bg-pirmary p-3 text-white rounded-full  hover:scale-110 duration-200">
+          <div className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary md:justify-start">
+            <div className=" bg-pirmary p-3 text-white rounded-full cursor-pointer hover:scale-110 duration-200">
               <BiSolidPhone size={35} />
             </div>
-            <p> Drop us a line</p>
+            <p className="cursor-pointer"> Drop us a line</p>
           </div>
         </div>
-        <div className="relative hidden md:block">
-          <div className="absolute top-40 w-full">
+        <div className="relative hidden md:block place-self-center mb-[35rem] w-full">
+          <div className={`absolute top-0 w-full duration-100`} ref={circle}>
             <Circle />
           </div>
-          <div className="absolute top-40 w-1/3">
+          <div className={`absolute top-0 w-1/3 duration-200`} ref={tube1}>
+            <TubeLg />
+          </div>
+          <div
+            className="absolute top-[16rem] right-36 rotate-[280deg] w-1/5 duration-200"
+            ref={tube2}
+          >
+            <TubeLg />
+          </div>
+          <div
+            className="absolute top-0 right-12 w-1/5 duration-300"
+            ref={tube3}
+          >
             <TubeLg />
           </div>
         </div>

@@ -11,6 +11,9 @@ module.exports = {
         secondery: "#fe759b",
         extra: "#3bd6f4",
       },
+      animation: {
+        "spin-slow": "spin 25s linear infinite",
+      },
     },
   },
   plugins: [],

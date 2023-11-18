@@ -22,7 +22,7 @@ function NavBar() {
 
           <ul
             className={`md:hidden flex flex-col gap-5 absolute z-10 top-0 left-0 w-2/3 h-screen justify-center items-center ${
-              open ? "translate-x-0" : "translate-x-[-100vh]"
+              open ? "translate-x-0" : "translate-x-[-100%]"
             } duration-150 ease-in-out drop-shadow-[50px] bg-white`}
           >
             <li className="block">Home</li>

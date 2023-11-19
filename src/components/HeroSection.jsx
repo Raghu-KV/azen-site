@@ -35,13 +35,13 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="p-10 ">
-      <div className="h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto">
+    <div className="">
+      <div className="h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto pt-20">
         <div className=" flex flex-col justify-center col-span-2">
           <h1 className="text-[45px] leading-[3rem] text-center md:leading-[5rem] md:text-[70px] md:text-left font-extrabold">
             INNOVATIVE SOLUTION,
           </h1>
-          <h2 className="md:text-[20px]  md:text-left mt-5 text-center">
+          <h2 className="md:text-[20px]  md:text-left mt-5 text-center text-gray-500">
             crafting your digital success story
           </h2>
           <div className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary md:justify-start">

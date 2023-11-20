@@ -12,7 +12,13 @@ module.exports = {
         extra: "#3bd6f4",
       },
       animation: {
-        "spin-slow": "spin 25s linear infinite",
+        wiggle: "wiggle 10s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },

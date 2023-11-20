@@ -6,17 +6,52 @@ import littleArbiaLogo from "../asset/littleArabia.png";
 import makeNBakec from "../asset/makeNbake.png";
 import mrAyul from "../asset/mrAyul.png";
 
+const companies = [
+  {
+    name: "avva",
+    logo: avvaLogo,
+  },
+  {
+    name: "billabong",
+    logo: billLogo,
+  },
+  {
+    name: "ganapathy",
+    logo: ganapathy,
+  },
+  {
+    name: "kangaroo",
+    logo: kangaroo,
+  },
+  {
+    name: "littleArbiaLogo",
+    logo: littleArbiaLogo,
+  },
+  {
+    name: "makeNBakec",
+    logo: makeNBakec,
+  },
+  {
+    name: "mrAyul",
+    logo: mrAyul,
+  },
+];
+
 function Coustomers() {
   return (
-    <div className="container mx-auto px-10">
+    <div className=" mx-auto my-24 px-5 md:px-10">
       <div className="mt-8">
-        <h2 className="font-poppins font-bold text-center text-2xl md:text-3xl">
+        <h2 className="font-poppins font-bold text-center text-2xl md:text-3xl mt-10">
           Preferred by Leading Enterprises
         </h2>
-        <div className="grid grid-cols-4 gap-20   ">
-          <div>
-            <img src={avvaLogo} alt="" srcset="" />
-          </div>
+
+        <div className="grid gap-4 grid-cols-2 md:flex md:flex-wrap md:justify-center mt-10">
+          {/* grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-x-20 mt-10 */}
+          {companies.map((company) => (
+            <div key={company.name} className="md:w-[15%]">
+              <img src={company.logo} alt={company.name} srcset="" />
+            </div>
+          ))}
         </div>
       </div>
     </div>

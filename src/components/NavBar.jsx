@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <div className=" bg-white fixed w-full z-10">
       <div className="container mx-auto">
-        <div className="flex min-h-[50px] items-center w-full px-5 font-poppins font-semibold justify-between">
+        <div className="flex min-h-[50px] items-center w-full px-20 font-poppins font-semibold justify-between">
           <div className="md:hidden z-20" onClick={() => setOpen(!open)}>
             {open ? <GoX size={30} /> : <BiMenu size={30} />}
           </div>

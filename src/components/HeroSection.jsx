@@ -36,7 +36,7 @@ function HeroSection() {
 
   return (
     <div className="">
-      <div className="h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto pt-20">
+      <div className="h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto pt-20 px-20">
         <div className=" flex flex-col justify-center col-span-2">
           <h1 className="text-[45px] leading-[3rem] text-center md:leading-[5rem] md:text-[70px] md:text-left font-extrabold">
             INNOVATIVE SOLUTION,
@@ -56,7 +56,7 @@ function HeroSection() {
             className={`absolute top-0 w-full duration-300 ease-linear`}
             ref={circle}
           >
-            <Circle className=" animate-spin-slow" />
+            <Circle />
           </div>
           <div
             className={`absolute top-0 w-1/3 duration-100 ease-linear`}

@@ -21,14 +21,14 @@ function FeedBack() {
   ];
 
   return (
-    <div className="container px-10 mx-auto ">
-      <div className="bg-gradient-to-r from-purple-800 to-pirmary w-[80%] font-poppins mx-auto rounded-2xl p-10">
+    <div className="container px-10 mx-auto bg-gradient-to-r from-purple-800 to-pirmary">
+      <div className="  font-poppins mx-auto rounded-2xl p-10">
         <h3 className="font-poppins font-bold text-center text-2xl text-white md:text-3xl px-2 py-5 mb-4">
           Yes, We Deliver on the Promise !
         </h3>
-        <div className="flex gap-6 px-10">
+        <div className="flex gap-6 px-10 mb-10">
           {feedBack.map((feedBack) => (
-            <SingleFeedBack feedBack={feedBack} />
+            <SingleFeedBack feedBack={feedBack} key={feedBack.person} />
           ))}
         </div>
       </div>

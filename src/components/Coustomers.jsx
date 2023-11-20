@@ -5,6 +5,7 @@ import kangaroo from "../asset/kangaroo.png";
 import littleArbiaLogo from "../asset/littleArabia.png";
 import makeNBakec from "../asset/makeNbake.png";
 import mrAyul from "../asset/mrAyul.png";
+import sportsVillage from "../asset/sports village - logo.png";
 
 const companies = [
   {
@@ -34,6 +35,10 @@ const companies = [
   {
     name: "mrAyul",
     logo: mrAyul,
+  },
+  {
+    name: "sportsVillage",
+    logo: sportsVillage,
   },
 ];
 

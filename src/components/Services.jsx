@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ServicesContainer from "./ServicesContainer";
 function Services() {
   //"dev" --> development
   //"mkr" --> marketing
@@ -32,7 +33,7 @@ function Services() {
           Commercialization
         </div>
       </div>
-      {/* component */}
+      <ServicesContainer service={service} />
     </div>
   );
 }

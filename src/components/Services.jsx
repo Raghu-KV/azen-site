@@ -5,7 +5,7 @@ function Services() {
   //"mkr" --> marketing
   const [service, setService] = useState("dev");
   return (
-    <div className="container mx-auto px-5 md:px-10">
+    <div className="container mx-auto px-5 md:px-10" id="services">
       <div>
         <h2 className=" font-poppins font-bold text-center text-2xl md:text-3xl">
           Services that we offer

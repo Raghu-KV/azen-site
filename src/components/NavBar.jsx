@@ -4,6 +4,7 @@ import { BiMenu } from "react-icons/bi";
 import { GoX } from "react-icons/go";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -52,7 +53,9 @@ function NavBar() {
             <li className="block cursor-pointer">
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="block cursor-pointer">Services</li>
+            <li className="block cursor-pointer">
+              <ScrollLink to="services">Services</ScrollLink>
+            </li>
             <li className="block cursor-pointer">
               <NavLink to="/contact">Contact</NavLink>
             </li>

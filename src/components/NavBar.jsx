@@ -3,6 +3,7 @@ import { BiSolidPhone } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { GoX } from "react-icons/go";
 import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -25,21 +26,36 @@ function NavBar() {
               open ? "translate-x-0" : "translate-x-[-100%]"
             } duration-150 ease-in-out drop-shadow-[50px] bg-white`}
           >
-            <li className="block">Home</li>
-            <li className="block">About</li>
+            <li className="block">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="block">
+              <NavLink to="/about">About</NavLink>
+            </li>
             <li className="block">Services</li>
-            <li className="block">Contact</li>
+            <li className="block">
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
           </ul>
 
           {/* logo DIV */}
           <div className="py-5 cursor-pointer">
-            <AzenLogo className="w-32 md:w-36" />
+            <Link to="/">
+              {" "}
+              <AzenLogo className="w-32 md:w-36" />
+            </Link>
           </div>
           <ul className="hidden md:flex gap-5">
-            <li className="block">Home</li>
-            <li className="block">About</li>
-            <li className="block">Services</li>
-            <li className="block">Contact</li>
+            <li className="block cursor-pointer">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="block cursor-pointer">
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li className="block cursor-pointer">Services</li>
+            <li className="block cursor-pointer">
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
           </ul>
           <div className="flex items-center gap-1 px-3 py-2 rounded-lg md:hidden">
             <BiSolidPhone size={30} />

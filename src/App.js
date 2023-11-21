@@ -1,18 +1,18 @@
-import Coustomers from "./components/Coustomers";
-import FeedBack from "./components/FeedBack";
+import Home from "./pages/Home";
+
 import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
+
 import NavBar from "./components/NavBar";
-import Services from "./components/Services";
+
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <>
       <NavBar />
-      <HeroSection />
-      <Services />
-      <FeedBack />
-      <Coustomers />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <Footer />
     </>
   );

@@ -36,10 +36,10 @@ const companies = [
     name: "mrAyul",
     logo: mrAyul,
   },
-  {
-    name: "sportsVillage",
-    logo: sportsVillage,
-  },
+  // {
+  //   name: "sportsVillage",
+  //   logo: sportsVillage,
+  // },
 ];
 
 function Coustomers() {

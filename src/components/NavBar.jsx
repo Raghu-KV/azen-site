@@ -4,7 +4,6 @@ import { BiMenu } from "react-icons/bi";
 import { GoX } from "react-icons/go";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -27,14 +26,14 @@ function NavBar() {
               open ? "translate-x-0" : "translate-x-[-100%]"
             } duration-150 ease-in-out drop-shadow-[50px] bg-white`}
           >
-            <li className="block">
+            <li className="block" onClick={() => setOpen(false)}>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li className="block">
+            <li className="block" onClick={() => setOpen(false)}>
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="block">Services</li>
-            <li className="block">
+
+            <li className="block" onClick={() => setOpen(false)}>
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
@@ -53,16 +52,16 @@ function NavBar() {
             <li className="block cursor-pointer">
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="block cursor-pointer">
-              <ScrollLink to="services">Services</ScrollLink>
-            </li>
+
             <li className="block cursor-pointer">
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
           <div className="flex items-center gap-1 px-3 py-2 rounded-lg md:hidden">
-            <BiSolidPhone size={30} />
-            <p className="hidden md:block">Contact</p>
+            <Link to={"/contact"}>
+              {" "}
+              <BiSolidPhone size={30} />
+            </Link>
           </div>
         </div>
       </div>

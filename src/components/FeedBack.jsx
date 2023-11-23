@@ -22,11 +22,11 @@ function FeedBack() {
 
   return (
     <div className="px-10 mx-auto bg-gradient-to-r from-purple-800 to-pirmary">
-      <div className="container  font-poppins mx-auto rounded-2xl pb-10 md:p-10">
-        <h3 className="font-poppins font-bold text-center text-2xl text-white md:text-3xl px-2 py-5 mb-4">
+      <div className="container  font-poppins mx-auto rounded-2xl pb-10 lg:p-10">
+        <h3 className="font-poppins font-bold text-center text-2xl text-white lg:text-3xl px-2 py-5 mb-4">
           Yes, We Deliver on the Promise !
         </h3>
-        <div className="flex flex-col gap-6 mb-10 md:flex-row md:px-10">
+        <div className="flex flex-col gap-6 mb-10 lg:flex-row lg:px-10">
           {feedBack.map((feedBack) => (
             <SingleFeedBack feedBack={feedBack} key={feedBack.person} />
           ))}

@@ -10,8 +10,8 @@ function NavBar() {
   return (
     <div className=" bg-white fixed w-full z-10">
       <div className="container mx-auto">
-        <div className="flex min-h-[50px] items-center w-full px-5 md:px-20 font-poppins font-semibold justify-between">
-          <div className="md:hidden z-20" onClick={() => setOpen(!open)}>
+        <div className="flex min-h-[50px] items-center w-full px-5 lg:px-20 font-poppins font-semibold justify-between">
+          <div className="lg:hidden z-20" onClick={() => setOpen(!open)}>
             {open ? <GoX size={30} /> : <BiMenu size={30} />}
           </div>
           {open && (
@@ -22,7 +22,7 @@ function NavBar() {
           )}
 
           <ul
-            className={`md:hidden flex flex-col gap-5 absolute z-10 top-0 left-0 w-2/3 h-screen justify-center items-center ${
+            className={`lg:hidden flex flex-col gap-5 absolute z-10 top-0 left-0 w-2/3 h-screen justify-center items-center ${
               open ? "translate-x-0" : "translate-x-[-100%]"
             } duration-150 ease-in-out drop-shadow-[50px] bg-white`}
           >
@@ -42,10 +42,10 @@ function NavBar() {
           <div className="py-5 cursor-pointer">
             <Link to="/">
               {" "}
-              <AzenLogo className="w-32 md:w-36" />
+              <AzenLogo className="w-32 lg:w-36" />
             </Link>
           </div>
-          <ul className="hidden md:flex gap-5">
+          <ul className="hidden lg:flex gap-5">
             <li className="block cursor-pointer">
               <NavLink to="/">Home</NavLink>
             </li>
@@ -57,7 +57,7 @@ function NavBar() {
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
-          <div className="flex items-center gap-1 px-3 py-2 rounded-lg md:hidden">
+          <div className="flex items-center gap-1 px-3 py-2 rounded-lg lg:hidden">
             <Link to={"/contact"}>
               {" "}
               <BiSolidPhone size={30} />

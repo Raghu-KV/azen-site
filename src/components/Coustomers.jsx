@@ -44,16 +44,16 @@ const companies = [
 
 function Coustomers() {
   return (
-    <div className=" mx-auto my-24 px-5 md:px-10">
+    <div className=" mx-auto my-24 px-5 lg:px-10">
       <div className="mt-8">
-        <h2 className="font-poppins font-bold text-center text-2xl md:text-3xl mt-10">
+        <h2 className="font-poppins font-bold text-center text-2xl lg:text-3xl mt-10">
           Preferred by Leading Enterprises
         </h2>
 
-        <div className="grid gap-4 grid-cols-2 md:flex md:flex-wrap md:justify-center mt-10">
-          {/* grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-x-20 mt-10 */}
+        <div className="grid gap-4 grid-cols-2 lg:flex lg:flex-wrap lg:justify-center mt-10">
+          {/* grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-x-20 mt-10 */}
           {companies.map((company) => (
-            <div key={company.name} className="md:w-[15%]">
+            <div key={company.name} className="lg:w-[15%]">
               <img src={company.logo} alt={company.name} srcset="" />
             </div>
           ))}

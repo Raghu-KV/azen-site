@@ -8,11 +8,11 @@ function SingleServiceContainer({ content, index }) {
         evlNum
           ? " bg-gradient-to-tr from-white to-gray-200"
           : " bg-gradient-to-tl from-white to-gray-200"
-      }  mx-auto rounded-lg my-5 px-10 py-10 md:w-[80%]`}
+      }  mx-auto rounded-lg my-5 px-10 py-10 lg:w-[80%]`}
     >
       <div
-        className={`flex flex-col justify-center items-center  gap-4 md:flex-row ${
-          evlNum && "md:flex-row-reverse"
+        className={`flex flex-col justify-center items-center  gap-4 lg:flex-row ${
+          evlNum && "lg:flex-row-reverse"
         } `}
       >
         <div className=" flex-grow-0">
@@ -24,7 +24,7 @@ function SingleServiceContainer({ content, index }) {
           />
         </div>
         <div className=" font-poppins basis-3/4">
-          <h2 className="text-center text-2xl font-bold md:text-left">
+          <h2 className="text-center text-2xl font-bold lg:text-left">
             {content.heading}
           </h2>
           <p className="text-sm mt-3 text-justify text-gray-500">

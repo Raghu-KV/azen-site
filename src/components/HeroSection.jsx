@@ -36,22 +36,22 @@ function HeroSection() {
 
   return (
     <div className="">
-      <div className="h-screen grid grid-cols-1 md:grid-cols-3 font-poppins container mx-auto pt-20 md:px-20">
+      <div className="h-screen grid grid-cols-1 lg:grid-cols-3 font-poppins container mx-auto pt-20 lg:px-20">
         <div className=" flex flex-col justify-center col-span-2">
-          <h1 className="text-[45px] leading-[3rem] text-center md:leading-[5rem] md:text-[70px] md:text-left font-extrabold">
+          <h1 className="text-[45px] leading-[3rem] text-center lg:leading-[5rem] lg:text-[70px] lg:text-left font-extrabold">
             INNOVATIVE SOLUTION,
           </h1>
-          <h2 className="md:text-[20px]  md:text-left mt-5 text-center text-gray-500">
+          <h2 className="lg:text-[20px]  lg:text-left mt-5 text-center text-gray-500">
             crafting your digital success story
           </h2>
-          <div className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary md:justify-start">
+          <div className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary lg:justify-start">
             <div className=" bg-pirmary p-3 text-white rounded-full cursor-pointer hover:scale-110 duration-200">
               <BiSolidPhone size={35} />
             </div>
             <p className="cursor-pointer"> Drop us a line</p>
           </div>
         </div>
-        <div className="relative hidden md:block place-self-center w-full mb-[100%]">
+        <div className="relative hidden lg:block place-self-center w-full mb-[100%]">
           <div
             className={`absolute top-0 w-full duration-300 ease-linear`}
             ref={circle}

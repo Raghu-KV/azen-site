@@ -5,12 +5,12 @@ function Services() {
   //"mkr" --> marketing
   const [service, setService] = useState("dev");
   return (
-    <div className="container mx-auto px-5 md:px-10" id="services">
+    <div className="container mx-auto px-5 lg:px-10" id="services">
       <div>
-        <h2 className=" font-poppins font-bold text-center text-2xl md:text-3xl">
+        <h2 className=" font-poppins font-bold text-center text-2xl lg:text-3xl">
           Services that we offer
         </h2>
-        <p className="mt-3 font-poppins text-center text-gray-500 text-sm md:text-base">
+        <p className="mt-3 font-poppins text-center text-gray-500 text-sm lg:text-base">
           we take pride in delivering a diverse range of professional services
           tailored to meet your unique needs
         </p>
@@ -19,7 +19,7 @@ function Services() {
         <div
           className={`px-3 py-2 rounded-lg border-2 border-pirmary cursor-pointer hover:scale-105 duration-100 text-sm ${
             service === "dev" && "bg-pirmary text-white"
-          } md:text-base`}
+          } lg:text-base`}
           onClick={() => setService("dev")}
         >
           Development
@@ -27,7 +27,7 @@ function Services() {
         <div
           className={`px-3 py-2 rounded-lg border-2 border-pirmary cursor-pointer hover:scale-105 duration-100 text-sm  ${
             service === "mrk" && "bg-pirmary text-white"
-          } md:text-base`}
+          } lg:text-base`}
           onClick={() => setService("mrk")}
         >
           Commercialization

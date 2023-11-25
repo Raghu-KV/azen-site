@@ -15,6 +15,9 @@ import { FaCss3Alt } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { SiMongodb } from "react-icons/si";
 
+import question from "../asset/question.png";
+import cog from "../asset/cog.png";
+
 import SingleWhoWeAre from "../components/SingleWhoWeAre";
 import SingleTech from "../components/SingleTech";
 
@@ -98,21 +101,28 @@ function About() {
   ];
 
   return (
-    <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins">
-      <div className="flex flex-col gap-4 items-center lg:flex-row">
-        <div className="flex flex-col items-center lg:basis-1/3">
-          <img src={laptop} alt="laptopImage" srcset="" className="block" />
-          <h2 className=" font-bold text-3xl">Who We Are</h2>
-        </div>
-        <div className="flex flex-row flex-wrap gap-5 justify-center lg:basis-2/3">
-          {whoWeAre.map((item, index) => (
-            <SingleWhoWeAre data={item} key={item.heading} index={index} />
-          ))}
+    <>
+      <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins">
+        <div className="flex flex-col gap-4 items-center lg:flex-row">
+          <div className="flex flex-col items-center lg:basis-1/3">
+            <img
+              src={question}
+              alt="laptopImage"
+              srcset=""
+              className="block w-[45%]"
+            />
+            <h2 className=" font-bold text-3xl">Who We Are</h2>
+          </div>
+          <div className="flex flex-row flex-wrap gap-5 justify-center lg:basis-2/3">
+            {whoWeAre.map((item, index) => (
+              <SingleWhoWeAre data={item} key={item.heading} index={index} />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="mt-10">
+      <div className="mt-20 p-10 bg-pirmary text-white">
         <h2 className="text-center font-bold text-3xl"> About the Company</h2>
-        <p className="text-sm text-justify text-gray-500 py-5 lg:px-10">
+        <p className="text-sm text-justify py-5 lg:px-10">
           In the year 2021, Azen was born with a singular mission: to empower
           businesses by crafting exceptional digital experiences. From the very
           beginning, our team of passionate tech enthusiasts set out to redefine
@@ -135,7 +145,12 @@ function About() {
       <div className="mt-10">
         <div className="flex flex-col lg:flex-row-reverse gap-10 justify-center">
           <div className="flex flex-col items-center lg:basis-1/3">
-            <img src={laptop} alt="laptopImage" srcset="" className="block" />
+            <img
+              src={cog}
+              alt="laptopImage"
+              srcset=""
+              className="block w-[45%]"
+            />
             <h3 className="font-bold text-3xl text-center">
               Technologies we Work with
             </h3>
@@ -147,7 +162,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

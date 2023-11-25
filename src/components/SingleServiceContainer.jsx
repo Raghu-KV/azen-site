@@ -15,15 +15,10 @@ function SingleServiceContainer({ content, index }) {
           evlNum && "lg:flex-row-reverse"
         } `}
       >
-        <div className=" flex-grow-0">
-          <img
-            src={content.image}
-            alt=""
-            srcset=""
-            className="basis-1/4 block"
-          />
+        <div className="w-[80%] basis-1/3">
+          <img src={content.image} alt="" srcset="" className=" block" />
         </div>
-        <div className=" font-poppins basis-3/4">
+        <div className=" font-poppins basis-2/3">
           <h2 className="text-center text-2xl font-bold lg:text-left">
             {content.heading}
           </h2>

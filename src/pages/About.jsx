@@ -101,8 +101,8 @@ function About() {
   ];
 
   return (
-    <>
-      <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins">
+    <div className="mb-20">
+      <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins ">
         <div className="flex flex-col gap-4 items-center lg:flex-row">
           <div className="flex flex-col items-center lg:basis-1/3">
             <img
@@ -143,7 +143,7 @@ function About() {
       </div>
 
       <div className="mt-10">
-        <div className="flex flex-col lg:flex-row-reverse gap-10 justify-center">
+        <div className="flex flex-col lg:flex-row-reverse gap-10 justify-center items-center">
           <div className="flex flex-col items-center lg:basis-1/3">
             <img
               src={cog}
@@ -151,7 +151,7 @@ function About() {
               srcset=""
               className="block w-[45%]"
             />
-            <h3 className="font-bold text-3xl text-center">
+            <h3 className="font-bold text-3xl text-center px-10">
               Technologies we Work with
             </h3>
           </div>
@@ -162,7 +162,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

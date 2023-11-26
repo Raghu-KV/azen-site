@@ -1,9 +1,18 @@
+import { motion } from "framer-motion";
 function SingleServiceContainer({ content, index }) {
   const evlNum = index % 2 !== 0;
   console.log(evlNum);
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: `${evlNum ? 10 : -10}`,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
       className={`${
         evlNum
           ? " bg-gradient-to-tr from-white to-gray-200"
@@ -27,7 +36,7 @@ function SingleServiceContainer({ content, index }) {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

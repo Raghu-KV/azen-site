@@ -156,8 +156,8 @@ function About() {
             </h3>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {tech.map((item) => (
-              <SingleTech item={item} />
+            {tech.map((item, index) => (
+              <SingleTech item={item} key={item.name} index={index} />
             ))}
           </div>
         </div>

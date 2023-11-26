@@ -120,9 +120,9 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mt-20 p-10 bg-pirmary text-white">
+      <div className="mt-20 p-10 bg-gradient-to-r from-purple-800 to-pirmary text-white">
         <h2 className="text-center font-bold text-3xl"> About the Company</h2>
-        <p className="text-sm text-justify py-5 lg:px-10">
+        <p className="text-base text-justify py-5 lg:px-10">
           In the year 2021, Azen was born with a singular mission: to empower
           businesses by crafting exceptional digital experiences. From the very
           beginning, our team of passionate tech enthusiasts set out to redefine

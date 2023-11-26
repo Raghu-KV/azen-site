@@ -1,4 +1,4 @@
-import { ReactComponent as AzenLogo } from "../asset/svg/logo.svg";
+import AzenLogo from "../asset/svg/logo.svg";
 import { BiSolidPhone } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { GoX } from "react-icons/go";
@@ -41,8 +41,8 @@ function NavBar() {
           {/* logo DIV */}
           <div className="py-5 cursor-pointer">
             <Link to="/">
-              {" "}
-              <AzenLogo className="w-32 lg:w-36" />
+              <img src={AzenLogo} alt="" className="w-32 lg:w-48" />
+              {/* <AzenLogo className="w-32 lg:w-48" /> */}
             </Link>
           </div>
           <ul className="hidden lg:flex gap-5">

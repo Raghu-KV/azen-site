@@ -1,14 +1,14 @@
-import { BiCopyright } from "react-icons/bi";
-import { ReactComponent as AzenLogo } from "../asset/svg/logo.svg";
+import AzenLogoWhite from "../asset/svg/logoWhite.svg";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
-    <div className="bg-black font-poppins  ">
-      <div className="container mx-auto text-black text-center py-10 mt-10px-10 lg:px-5">
+    <div className="bg-gradient-to-r from-purple-800 to-pirmary font-poppins  ">
+      <div className="container mx-auto text-center py-10 mt-10px-10 lg:px-5">
         <div className="flex flex-col lg:flex-row  justify-between items-center gap-10">
           <div>
-            <AzenLogo className="bg-white w-52" />
+            <img src={AzenLogoWhite} alt="" className=" w-52" />
+            {/* <AzenLogo className=" w-52" /> */}
           </div>
 
           <div className=" text-white">

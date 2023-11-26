@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         pirmary: "#8339e4",
-        secondery: "#fe759b",
+        secondery: "#19b087",
         extra: "#3bd6f4",
       },
       animation: {

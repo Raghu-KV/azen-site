@@ -24,7 +24,7 @@ const dev = [
     image: soft,
   },
   {
-    heading: "User Experience (UX) & User Interface (UI) Design",
+    heading: "UX & UI Design",
     content:
       " We understand that the success of any digital product hinges on how well it engages and delights its users. With a passionate team of UX/UI designers, we are dedicated to creating seamless, visually stunning, and user-centric interfaces that leave a lasting impression.",
     image: ui,

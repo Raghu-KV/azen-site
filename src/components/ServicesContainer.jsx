@@ -2,6 +2,10 @@ import image from "../asset/How-to-Build-Your-Own-Laptop-From-Scratch-removebg-p
 import e_commerce from "../asset/e-commerce.png";
 import soft from "../asset/software.png";
 import ui from "../asset/ui.png";
+import marketingStr from "../asset/marketingStr.png";
+import research from "../asset/research.png";
+import analyses from "../asset/analasis.png";
+import ads from "../asset/ads.png";
 import SingleServiceContainer from "./SingleServiceContainer";
 
 const dev = [
@@ -31,6 +35,33 @@ const dev = [
   },
 ];
 
+const mrk = [
+  {
+    heading: "Marketing Strategy",
+    content:
+      "No two businesses are alike, and neither are our solutions. We tailor our marketing strategies to align with your specific goals, ensuring a customized approach that delivers results.",
+    image: marketingStr,
+  },
+  {
+    heading: "Market Research",
+    content:
+      "Understand who your customers are, what they want, and how to reach them. Market research unveils the habits, preferences, and pain points of your target audience, ensuring your products or services resonate Keep a keen eye on industry trends and emerging opportunities. With market research, you're not just following; you're leading. Anticipate shifts, adapt strategies, and be the first to seize new possibilities.",
+    image: research,
+  },
+  {
+    heading: "Competition analyses",
+    content:
+      "Identify what makes your competitors tick. Through in-depth analysis, we unveil their strengths, weaknesses, and unique selling propositions, empowering you to position your brand strategically. By understanding your competitors, you can anticipate industry shifts, market disruptions, and potential challenges, allowing you to proactively mitigate risks.",
+    image: analyses,
+  },
+  {
+    heading: "ad campaigns",
+    content:
+      "We don't just throw ads; we strategically place them where your audience is. Our campaigns are precision-engineered to target the right demographics at the right time, ensuring maximum impact.",
+    image: ads,
+  },
+];
+
 function ServicesContainer({ service }) {
   if (service === "dev") {
     return (
@@ -47,7 +78,7 @@ function ServicesContainer({ service }) {
   } else if (service === "mrk") {
     return (
       <div>
-        {dev.map((content, index) => (
+        {mrk.map((content, index) => (
           <SingleServiceContainer
             content={content}
             key={content.heading}

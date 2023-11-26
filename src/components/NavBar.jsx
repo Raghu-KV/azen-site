@@ -41,7 +41,7 @@ function NavBar() {
           {/* logo DIV */}
           <div className="py-5 cursor-pointer">
             <Link to="/">
-              <img src={AzenLogo} alt="" className="w-32 lg:w-48" />
+              <img src={AzenLogo} alt="" className="w-32 lg:w-40" />
               {/* <AzenLogo className="w-32 lg:w-48" /> */}
             </Link>
           </div>

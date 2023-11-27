@@ -20,11 +20,16 @@ function SingleServiceContainer({ content, index }) {
       }  mx-auto rounded-lg my-5 px-10 py-10 lg:w-[80%]`}
     >
       <div
-        className={`flex flex-col justify-center items-center  gap-4 lg:flex-row ${
+        className={`flex flex-col justify-center items-center relative  gap-4 lg:flex-row ${
           evlNum && "lg:flex-row-reverse"
         } `}
       >
-        <div className="w-[80%] basis-1/3">
+        <div
+          className={`absolute w-40 h-40 lg:w-64 lg:h-64 bg-secondery top-10 ${
+            evlNum ? "right-5" : "left-5"
+          } filter blur-3xl rounded-full opacity-50`}
+        ></div>
+        <div className="w-[80%] basis-1/3 relative">
           <img src={content.image} alt="" srcset="" className=" block" />
         </div>
         <div className=" font-poppins basis-2/3">

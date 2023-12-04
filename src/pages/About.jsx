@@ -1,4 +1,4 @@
-import laptop from "../asset/How-to-Build-Your-Own-Laptop-From-Scratch-removebg-preview.png";
+import { Helmet } from "react-helmet";
 import { FaRegHandshake } from "react-icons/fa";
 import { FaRegLightbulb } from "react-icons/fa";
 import { FaRegHandSpock } from "react-icons/fa";
@@ -101,68 +101,78 @@ function About() {
   ];
 
   return (
-    <div className="mb-20">
-      <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins ">
-        <div className="flex flex-col gap-4 items-center lg:flex-row">
-          <div className="flex flex-col items-center lg:basis-1/3">
-            <img
-              src={question}
-              alt="laptopImage"
-              srcset=""
-              className="block w-[45%]"
-            />
-            <h2 className=" font-bold text-3xl">Who We Are</h2>
-          </div>
-          <div className="flex flex-row flex-wrap gap-5 justify-center lg:basis-2/3">
-            {whoWeAre.map((item, index) => (
-              <SingleWhoWeAre data={item} key={item.heading} index={index} />
-            ))}
+    <>
+      <Helmet>
+        <title>About the company</title>
+        <meta name="description" content="About company and it's vision" />
+        <meta
+          name="keywords"
+          content="web development, website, web development company in erode"
+        />
+      </Helmet>
+      <div className="mb-20">
+        <div className="container pt-24 mx-auto px-5 lg:px-10 font-poppins ">
+          <div className="flex flex-col gap-4 items-center lg:flex-row">
+            <div className="flex flex-col items-center lg:basis-1/3">
+              <img
+                src={question}
+                alt="laptopImage"
+                srcset=""
+                className="block w-[45%]"
+              />
+              <h2 className=" font-bold text-3xl">Who We Are</h2>
+            </div>
+            <div className="flex flex-row flex-wrap gap-5 justify-center lg:basis-2/3">
+              {whoWeAre.map((item, index) => (
+                <SingleWhoWeAre data={item} key={item.heading} index={index} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="mt-20 p-10 bg-gradient-to-r from-purple-800 to-pirmary text-white">
-        <h2 className="text-center font-bold text-3xl"> About the Company</h2>
-        <p className="text-base text-justify py-5 lg:px-10">
-          In the year 2021, Azen was born with a singular mission: to empower
-          businesses by crafting exceptional digital experiences. From the very
-          beginning, our team of passionate tech enthusiasts set out to redefine
-          the standards of web development, app development, and digital
-          marketing. At Azen, we understand that your website is the virtual
-          storefront of your business. Our seasoned web developers blend
-          creativity with functionality to ensure that your online presence not
-          only captivates but also converts visitors into loyal customers. From
-          responsive design to e-commerce solutions, we weave digital magic
-          tailored to your unique needs. In the palm of your users' hands lies
-          the potential for unparalleled engagement. Azen specializes in
-          crafting mobile applications that are not just functional but provide
-          an immersive user experience. Whether you're launching a startup or
-          enhancing an existing app, our development wizards ensure that your
-          vision comes to life in the most user-friendly and innovative way
-          possible.
-        </p>
-      </div>
+        <div className="mt-20 p-10 bg-gradient-to-r from-purple-800 to-pirmary text-white">
+          <h2 className="text-center font-bold text-3xl"> About the Company</h2>
+          <p className="text-base text-justify py-5 lg:px-10">
+            In the year 2021, Azen was born with a singular mission: to empower
+            businesses by crafting exceptional digital experiences. From the
+            very beginning, our team of passionate tech enthusiasts set out to
+            redefine the standards of web development, app development, and
+            digital marketing. At Azen, we understand that your website is the
+            virtual storefront of your business. Our seasoned web developers
+            blend creativity with functionality to ensure that your online
+            presence not only captivates but also converts visitors into loyal
+            customers. From responsive design to e-commerce solutions, we weave
+            digital magic tailored to your unique needs. In the palm of your
+            users' hands lies the potential for unparalleled engagement. Azen
+            specializes in crafting mobile applications that are not just
+            functional but provide an immersive user experience. Whether you're
+            launching a startup or enhancing an existing app, our development
+            wizards ensure that your vision comes to life in the most
+            user-friendly and innovative way possible.
+          </p>
+        </div>
 
-      <div className="mt-10">
-        <div className="flex flex-col lg:flex-row-reverse gap-10 justify-center items-center">
-          <div className="flex flex-col items-center lg:basis-1/3">
-            <img
-              src={cog}
-              alt="laptopImage"
-              srcset=""
-              className="block w-[45%]"
-            />
-            <h3 className="font-bold text-3xl text-center px-10">
-              Technologies we Work with
-            </h3>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {tech.map((item, index) => (
-              <SingleTech item={item} key={item.name} index={index} />
-            ))}
+        <div className="mt-10">
+          <div className="flex flex-col lg:flex-row-reverse gap-10 justify-center items-center">
+            <div className="flex flex-col items-center lg:basis-1/3">
+              <img
+                src={cog}
+                alt="laptopImage"
+                srcset=""
+                className="block w-[45%]"
+              />
+              <h3 className="font-bold text-3xl text-center px-10">
+                Technologies we Work with
+              </h3>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              {tech.map((item, index) => (
+                <SingleTech item={item} key={item.name} index={index} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

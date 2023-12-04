@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 function SingleServiceContainer({ content, index }) {
   const evlNum = index % 2 !== 0;
-  console.log(evlNum);
+  //console.log(evlNum);
 
   return (
     <motion.div
@@ -25,9 +25,9 @@ function SingleServiceContainer({ content, index }) {
         } `}
       >
         <div
-          className={`absolute w-40 h-40 lg:w-64 lg:h-64 bg-secondery top-10 ${
+          className={`absolute bg-secondery top-10 ${
             evlNum ? "right-5" : "left-5"
-          } filter blur-3xl rounded-full opacity-50`}
+          } filter blur-3xl rounded-full opacity-50 hidden lg:w-64 lg:h-64 lg:block`}
         ></div>
         <div className="w-[80%] basis-1/3 relative">
           <img src={content.image} alt="" srcset="" className=" block" />

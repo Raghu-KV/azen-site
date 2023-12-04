@@ -4,6 +4,7 @@ import { ReactComponent as Circle } from "../asset/svg/circle.svg";
 import { ReactComponent as TubeLg } from "../asset/svg/tube-lg.svg";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
   const circle = useRef();
@@ -13,7 +14,7 @@ function HeroSection() {
 
   useEffect(() => {
     const parallax = (event) => {
-      console.log(circle.current);
+      //console.log(circle.current);
       const x = event.clientX;
       const y = event.clientY;
       circle.current.style.transform = `translateX(${x / 50}px) translateY(${
@@ -34,6 +35,8 @@ function HeroSection() {
     return () => document.removeEventListener("mousemove", parallax);
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <div className="">
       <div className="h-screen grid grid-cols-1 lg:grid-cols-3 font-poppins container mx-auto pt-20 lg:px-20">
@@ -44,7 +47,10 @@ function HeroSection() {
           <h2 className="lg:text-[20px]  lg:text-left mt-5 text-center text-gray-500">
             crafting your digital success story
           </h2>
-          <div className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary lg:justify-start">
+          <div
+            className="flex py-3 justify-center  gap-2 mt-4 font-semibold items-center text-pirmary lg:justify-start"
+            onClick={() => navigate("/contact")}
+          >
             <div className=" bg-pirmary p-3 text-white rounded-full cursor-pointer hover:scale-110 duration-200">
               <BiSolidPhone size={35} />
             </div>

@@ -2,6 +2,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import SingleContactUs from "../components/SingleContactUs";
 import { FaEnvelope } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+
+import { Helmet } from "react-helmet";
 function Contact() {
   const contactDetails = [
     {
@@ -28,13 +30,26 @@ function Contact() {
   ];
 
   return (
-    <div className="">
-      <div className="container mx-auto px-5 lg:px-10 flex flex-col  gap-1 justify-center items-center min-h-screen pt-32 lg:pt-0 lg:flex-row">
-        {contactDetails.map((item) => (
-          <SingleContactUs item={item} key={item.type} />
-        ))}
+    <>
+      <Helmet>
+        <title>contact us</title>
+        <meta
+          name="description"
+          content="contact details for azen web development company"
+        />
+        <meta
+          name="keywords"
+          content="web development, website, web development company in erode"
+        />
+      </Helmet>
+      <div className="">
+        <div className="container mx-auto px-5 lg:px-10 flex flex-col  gap-1 justify-center items-center min-h-screen pt-32 lg:pt-0 lg:flex-row">
+          {contactDetails.map((item) => (
+            <SingleContactUs item={item} key={item.type} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
